@@ -1,0 +1,19 @@
+name: MiniTask CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # TODO: Set up Python 3.12 using actions/setup-python.
+      # TODO: Install requirements-dev.txt.
+      # TODO: Run pytest.
+      # TODO: Build the Docker image as minitask:ci.
